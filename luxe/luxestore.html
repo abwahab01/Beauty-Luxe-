@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Luxe Store</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff8fb;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #d63384;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 35px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(to right, #ffd6e8, #fff);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 40px;
+    color: #b03060;
+}
+
+.hero p {
+    margin: 15px;
+}
+
+/* Products */
+.container {
+    padding: 30px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #ddd;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+.price {
+    color: #d63384;
+    font-weight: bold;
+}
+
+button {
+    background: #d63384;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+button:hover {
+    background:#a61e5c;
+}
+
+/* Cart */
+.cart {
+    background:#fff;
+    padding:20px;
+    margin:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px #ddd;
+}
+
+footer {
+    background:#d63384;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+<h1>Beauty Luxe</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Makeup</a>
+<a href="#">Bags</a>
+<a href="#">Jewellery</a>
+<a href="#">Cosmetics</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h2>Luxury Beauty & Fashion</h2>
+
+<p>Discover premium makeup, cosmetics, bags and jewellery.</p>
+
+</section>
+
+
+<section class="container">
+
+<h2>Our Products</h2>
+
+<br>
+
+<div class="products">
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e">
+<h3>Luxury Makeup Kit</h3>
+<p class="price">$35</p>
+<button onclick="addCart()">Add To Cart</button>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
+<h3>Beauty Cosmetics</h3>
+<p class="price">$25</p>
+<button onclick="addCart()">Add To Cart</button>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3">
+<h3>Designer Hand Bag</h3>
+<p class="price">$80</p>
+<button onclick="addCart()">Add To Cart</button>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338">
+<h3>Gold Jewellery</h3>
+<p class="price">$120</p>
+<button onclick="addCart()">Add To Cart</button>
+</div>
+
+
+</div>
+
+</section>
+
+
+<div class="cart">
+
+<h2>Shopping Cart</h2>
+
+<p>
+Items in cart:
+<span id="cartCount">0</span>
+</p>
+
+</div>
+
+
+
+<footer>
+
+<p>© 2026 Beauty Luxe Store</p>
+
+</footer>
+
+
+
+<script>
+
+let count = 0;
+
+function addCart(){
+
+count++;
+
+document.getElementById("cartCount").innerHTML=count;
+
+alert("Product added to cart!");
+
+}
+
+</script>
+
+
+</body>
+</html>
